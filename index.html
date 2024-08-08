@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cold Drinks</title>
+    <link rel="stylesheet" href="./Style.css">
+</head>
+<body>
+    <main>
+        <nav>
+            <h1><img src="./imgs//bg.png"   alt="soft Drink Logo"></h1>
+            <ul>
+                <li>Home</li>
+                <li>Menu</li>
+                <li>About</li>
+            </ul>
+        </nav>
+
+        <section>
+            <div class="container">
+                <div class="text-Content">
+                    <h2>That's What </h2>
+                    <h1 id="title">I like</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere a explicabo eum tenetur ipsam vitae ratione ut ad ab modi! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic vel fugit doloremque tempora minus minima nemo animi similique ut quae? Vero aliquid, debitis exercitationem doloremque eaque iusto repellat magni nesciunt Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis quis recusandae, facilis maxime ducimus vitae temporibus iusto quidem expedita quia et commodi unde cupiditate exercitationem accusantium at iure! Animi, corporis?</p>
+                    <button>Order Now</button>
+                </div>
+                <div class="img-Content">
+                        <p id="imgs"></p>
+                </div>
+            </div>
+            <div  class="select">
+                <img src="./imgs/pic1.png" onclick="changeImg('./imgs/pic1.png');changeBg('#830808')" width="30" alt="">
+                <img src="./imgs/pic2.png" onclick="changeImg('./imgs/pic2.png');changeBg('rgb(233, 226, 226)')" width="30" alt="">
+                <img src="./imgs/pic3.png" onclick="changeImg('./imgs/pic3.png');changeBg('#0a0349')" width="30" alt="">
+            </div>
+        </section>
+    </main>
+        <script>
+            const imgs = document.getElementById("imgs");
+            const bg = document.querySelector(".img-Content");
+            function changeImg(img){
+                imgs.style.backgroundImage = "url(" + img + ")";
+            }
+            function changeBg(color){ 
+                bg.style.backgroundColor = `${color}`
+                document.getElementById("title").style.color = `${color}`
+            }
+        </script>
+</body>
+</html>
